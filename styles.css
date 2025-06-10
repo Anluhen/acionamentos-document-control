@@ -1,31 +1,42 @@
-* { 
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-body { 
+
+body {
   display: flex;
+  font-family: Arial, sans-serif;
   height: 100vh;
-  font-family: Arial, sans-serif; 
 }
+
 #sidebar {
   width: 200px;
-  height: 100%;
   background: #2c3e50;
   color: #ecf0f1;
   transition: width 0.3s;
   overflow: hidden;
 }
-#sidebar.collapsed { width: 60px; }
-#sidebar ul { list-style: none; }
+
+#sidebar.collapsed {
+  width: 60px;
+}
+
+#sidebar ul {
+  list-style: none;
+}
+
 #sidebar li {
   display: flex;
   align-items: center;
   padding: 15px;
   cursor: pointer;
 }
-#sidebar li img { width: 24px; margin-right: 10px; }
-#sidebar.collapsed li span { display: none; }
+
+#sidebar.collapsed li span {
+  display: none;
+}
+
 #toggleBtn {
   background: none;
   border: none;
@@ -36,21 +47,80 @@ body {
   cursor: pointer;
 }
 
-#content { flex-grow: 1; padding: 20px; }
-.page { display: none; }
-.page.active { display: block; }
+#content {
+  flex-grow: 1;
+  padding: 20px;
+  overflow: auto;
+}
 
-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-th, td {
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
   border: 1px solid #bdc3c7;
   padding: 8px;
   text-align: left;
 }
+
+.th-container {
+  position: relative;
+}
+
+.menu-icon {
+  float: right;
+  cursor: pointer;
+  user-select: none;
+}
+
+.popup-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  width: 150px;
+}
+
+.popup-menu.show {
+  display: block;
+}
+
+.popup-menu button {
+  width: 100%;
+  margin: 4px 0;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.popup-menu input {
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 4px;
+  box-sizing: border-box;
+}
+
 .add-row td {
   text-align: center;
   background: #ecf0f1;
   cursor: pointer;
 }
+
 .add-row td:hover {
   background: #d0d7de;
 }
