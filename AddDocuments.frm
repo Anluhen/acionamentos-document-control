@@ -1,10 +1,10 @@
 VERSION 5.00
 Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} AddDocuments 
    Caption         =   "UserForm1"
-   ClientHeight    =   7740
+   ClientHeight    =   6165
    ClientLeft      =   405
    ClientTop       =   1050
-   ClientWidth     =   22365
+   ClientWidth     =   17745
    OleObjectBlob   =   "AddDocuments.frx":0000
    StartUpPosition =   1  'CenterOwner
 End
